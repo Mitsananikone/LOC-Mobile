@@ -3,7 +3,6 @@ import React from "react";
 function Location() {
   // Define styles
   const styles = {
-
     centerContainer: {
       display: "flex",
       justifyContent: "center",
@@ -44,6 +43,18 @@ function Location() {
         padding: "0 10px", // Adjust padding for mobile
       },
     },
+    videoContainer: {
+      width: "100%",
+      maxWidth: "500px", // Limit the width of the video
+      margin: "0 auto 20px auto", // Center the video and add margin below
+      borderRadius: "10px",
+      overflow: "hidden",
+    },
+    video: {
+      width: "100%",
+      height: "auto", // Maintain aspect ratio
+      borderRadius: "10px",
+    },
     mapContainer: {
       width: "100%",
       height: "400px",
@@ -81,6 +92,20 @@ function Location() {
           <p>
             Hosting church services at ACC's conference room provides a welcoming and accessible space for worship. The modern facilities and central location make it easy for everyone to join us, whether you're a long-time resident or new to the area.
           </p>
+          <br />
+          <p>
+            <b>
+              <i> Living Oaks Church is located at Alvin Community College Building C, Floor 2</i>
+            </b>
+          </p>
+        </div>
+
+        {/* Video Embed */}
+        <div style={styles.videoContainer}>
+          <video controls style={styles.video}>
+            <source src="/images/loc-location.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
         {/* Google Maps Embed */}
